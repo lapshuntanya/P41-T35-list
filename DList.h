@@ -29,7 +29,13 @@ namespace MyList {
 			head = tail = nullptr;
 		}
 		~DList() {
-			//empty
+			DNode<U>* p = tail;
+			while (p != nullptr) {
+				p = p->prev;
+				if (p == nullptr) delete head;
+				else delete p->next;
+			}
+			head = tail = nullptr;
 		}
 		void push_back(U value) {
 			// 1- Створюємо вузол
@@ -60,5 +66,14 @@ namespace MyList {
 				}
 			}
 		}
+
+		void show_reverse() {
+
+		}
+
+		DNode<U>* search(U value) { //Пошук вузла із заданим значенням
+			return nullptr;
+		}
+
 	};
 }

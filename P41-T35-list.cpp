@@ -1,4 +1,5 @@
 #include "MyList.h"
+#include "DList.h"
 #include <string>
 
 int main()
@@ -23,7 +24,7 @@ int main()
     }*/
 
 
-    MyList::List<std::string>  p41;
+    MyList::DList<std::string>  p41;
     p41.push_back("Цимбал Михайло");
     p41.push_back("Троневич Владислав");
     p41.push_back("Свєчкарьов Данііл");
@@ -31,5 +32,12 @@ int main()
     p41.push_back("Нікітенко Максим");
 
     p41.showList();
+
+    if (p41.search("Пономаренко Євген") == nullptr)
+        cout << "not found!\n";
+    else {
+        p41.search("Пономаренко Євген")->printDNode();
+    }
+
 }
 
