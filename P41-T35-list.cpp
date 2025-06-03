@@ -1,4 +1,5 @@
 #include "MyList.h"
+#include <string>
 
 int main()
 {
@@ -21,5 +22,14 @@ int main()
         p = p->next;
     }*/
 
+
+    MyList::List<std::string>  p41;
+    p41.push_back("Цимбал Михайло");
+    p41.push_back("Троневич Владислав");
+    p41.push_back("Свєчкарьов Данііл");
+    p41.push_back("Пономаренко Євген");
+    p41.push_back("Нікітенко Максим");
+
+    p41.showList();
 }
 

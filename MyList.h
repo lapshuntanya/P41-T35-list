@@ -45,6 +45,7 @@ namespace MyList {
 				tail = el;
 			}
 		}
+		
 		void showList() {
 			Node<U>* p = head;
 
