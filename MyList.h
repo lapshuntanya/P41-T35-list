@@ -31,7 +31,19 @@ namespace MyList {
 			//empty
 		}
 		void push_back(U value) {
+			// 1- Створюємо вузол
+			Node<U>* el = new Node<U>(value);
 
+			//2 - Немає вузлів в списку
+			if (head == nullptr) {
+				head = tail = el;
+			}
+			else {
+				//3-1 Прив'язуємо вузли
+				tail->next = el;
+				//3-2 Зсовуємо хвіст в кінець
+				tail = el;
+			}
 		}
 	};
 
