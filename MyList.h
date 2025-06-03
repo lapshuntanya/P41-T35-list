@@ -45,6 +45,17 @@ namespace MyList {
 				tail = el;
 			}
 		}
+		void showList() {
+			Node<U>* p = head;
+
+			if (p == nullptr) cout << "List is empty!\n";
+			else {
+				while (p != nullptr) {
+					p->printNode();
+					p = p->next;
+				}
+			}
+		}
 	};
 
 }
